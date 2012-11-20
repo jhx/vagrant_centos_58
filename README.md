@@ -130,6 +130,10 @@ Start VM
 - Complete: **Reboot**
 
 
+Take snapshot.
+
+
+
 Setup Vagrant
 -------------
 Login as root.
