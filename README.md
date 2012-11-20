@@ -87,17 +87,11 @@ Start VM
 
 		[*] Activate on boot
 		[*] Enable IPv4 support
-		[*] Enable IPv6 support
+		[ ] Enable IPv6 support
 
 - IPv4 Configuration for eth0
 
 		(*) Dynamic IP configuration (DHCP)
-		( ) Manual address configuration
-
-- IPv6 Configuration for eth0
-
-		(*) Automatic neighbor discovery
-		( ) Dynamic IP configuration (DHCPv6)
 		( ) Manual address configuration
 
 - Hostname Configuration
