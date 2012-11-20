@@ -309,7 +309,7 @@ Disable `kudzu`:
 Remove packages and empty caches:
 
     $ rm -rf ~/src
-    $ sudo yum remove -y *-devel
+    $ (sudo yum remove -y *-devel) # not sure about this
     $ sudo yum clean all
     $ sudo rm /root/install.log
 
