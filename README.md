@@ -193,6 +193,10 @@ Mount CDROM & run installation script (ignore error related to Window System dri
     $ sudo mount /dev/cdrom /media
     $ sudo sh /media/VBoxLinuxAdditions.run
 
+Remove unneeded packages:
+
+	$ sudo yum remove -y kernel-devel
+
 Take snapshot.
 
 
@@ -239,7 +243,7 @@ Install Ruby
 ------------
 Install Ruby and related packages:
 
-	$ sudo yum install -y ruby.x86_64 ruby-devel.x86_64 rubygems
+	$ sudo yum install -y ruby.x86_64 rubygems
 
 Create `/etc/gemrc` defaults:
 
