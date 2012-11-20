@@ -177,7 +177,7 @@ Take snapshot.
 
 
 Install Guest Additions
-----------------------------------
+-----------------------
 Devices > Install Guest Additions…
 
 Login as vagrant.
@@ -220,8 +220,8 @@ Restart `sshd` daemon:
 Take snapshot.
 
 
-Install Ruby (source)
----------------------
+Install Ruby
+------------
 Install required packages:
 
 	$ sudo yum install -y openssl-devel readline-devel zlib-devel
@@ -270,8 +270,8 @@ Install Chef gem:
 Take snapshot.
 
 
-Edit Path
----------
+Configure Path
+--------------
 Add paths to `/etc/profile.d`:
 
 	$ sudo sh -c "echo 'pathmunge /sbin' > /etc/profile.d/path_sbin.sh"
