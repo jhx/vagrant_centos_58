@@ -282,3 +282,4 @@ Package
 CD to directory containing virtual machine disk.
 
 	$ vagrant package --base centos-5.8-minimal
+	$ vagrant box add centos-58-x86_64-minimal ./package.box
