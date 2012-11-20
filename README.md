@@ -191,10 +191,6 @@ Mount CDROM & run installation script (ignore error related to Window System dri
     $ sudo mount /dev/cdrom /media
     $ sudo sh /media/VBoxLinuxAdditions.run
 
-Remove unneeded packages:
-
-	$ sudo yum remove -y kernel-devel
-
 Take snapshot.
 
 
