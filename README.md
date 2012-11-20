@@ -237,7 +237,7 @@ Install Ruby
 ------------
 Install Ruby and related packages:
 
-	$ sudo yum install -y ruby.x86_64 rubygems
+	$ sudo yum install -y ruby.x86_64 ruby-devel.x86_64 rubygems
 
 Create `/etc/gemrc` defaults:
 
