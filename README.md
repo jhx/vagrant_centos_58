@@ -274,6 +274,8 @@ Empty caches:
     $ sudo yum clean all
     $ sudo rm /root/install.log
 
+Take snapshot.
+
 
 Package
 -------
