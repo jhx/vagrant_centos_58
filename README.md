@@ -138,14 +138,14 @@ Setup Vagrant
 -------------
 Login as root.
 
+Install basic packages:
+
+	# yum install -y man nano sudo wget
+
 Create `vagrant` user:
 
 	# useradd vagrant
 	# passwd vagrant (vagrant)
-
-Install basic packages:
-
-	# yum install -y man nano sudo wget
 
 Configure sudo via `visudo`:
 
