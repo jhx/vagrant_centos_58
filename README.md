@@ -248,6 +248,24 @@ Install Ruby from source:
 	$ ./configure --prefix=/opt/vagrant_ruby --enable-shared --disable-install-doc --with-opt-dir=/usr/local
 	$ make && sudo make install
 
+Install ruby/openssl:
+
+	$ cd ext/openssl
+	$ /opt/vagrant_ruby/bin/ruby extconf.rb
+	$ make && sudo make install
+
+Install ruby/readline:
+
+	$ cd ../readline
+	$ /opt/vagrant_ruby/bin/ruby extconf.rb
+	$ make && sudo make install
+
+Install ruby/zlib:
+
+	$ cd ../zlib
+	$ /opt/vagrant_ruby/bin/ruby extconf.rb
+	$ make && sudo make install
+
 Install Rubygems from source:
 
 	$ cd ~/src
