@@ -220,6 +220,56 @@ Restart `sshd` daemon:
 Take snapshot.
 
 
+Install Ruby (source)
+---------------------
+Install required packages:
+
+	$ sudo yum install -y openssl-devel readline-devel zlib-devel
+
+Create `~/src` directory:
+
+	$ mkdir -p ~/src
+
+Install `libyaml` from source:
+
+	$ cd ~/src
+	$ wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+	$ tar zxvf yaml-0.1.4.tar.gz
+	$ cd yaml-0.1.4
+	$ ./configure --prefix=/usr/local
+	$ make && sudo make install
+	
+Install Ruby from source:
+
+	$ cd ~/src
+	$ wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p327.tar.gz
+	$ tar zxvf ruby-1.9.3-p327.tar.gz
+	$ cd ruby-1.9.3-p327
+	$ ./configure --prefix=/opt/vagrant_ruby --enable-shared --disable-install-doc --with-opt-dir=/usr/local
+	$ make && sudo make install
+
+Install Rubygems from source:
+
+	$ cd ~/src
+	$ wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.24.tgz
+	$ tar zxvf rubygems-1.8.24.tgz
+	$ cd rubygems-1.8.24
+	$ sudo /opt/vagrant_ruby/bin/ruby setup.rb
+
+Create `/etc/gemrc` defaults:
+
+```
+$ sudo sh -c "echo 'install: --no-rdoc --no-ri
+update:  --no-rdoc --no-ri' > /etc/gemrc"
+```
+
+Install Chef gem:
+
+	$ sudo /opt/vagrant_ruby/bin/gem install chef --no-rdoc --no-ri
+
+Take snapshot.
+
+
 Install Additional Repos
 ------------------------
 Download and install EPEL:
@@ -259,6 +309,8 @@ Add paths to `/etc/profile.d`:
 
 	$ sudo sh -c "echo 'pathmunge /sbin' > /etc/profile.d/path_sbin.sh"
 	$ sudo sh -c "echo 'pathmunge /usr/sbin' > /etc/profile.d/path_usr_sbin.sh"
+	$ sudo sh -c "echo 'pathmunge /opt/vagrant_ruby/bin' > /etc/profile.d/path_opt_vagrant_ruby_bin.sh"
+	$ source /etc/profile
 
 Take snapshot.
 
@@ -269,8 +321,10 @@ Disable `kudzu`:
 
 	$ sudo chkconfig kudzu off
 
-Empty caches:
+Remove packages and empty caches:
 
+    $ rm -rf ~/src
+    $ sudo yum remove -y *-devel
     $ sudo yum clean all
     $ sudo rm /root/install.log
 
