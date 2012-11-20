@@ -274,3 +274,9 @@ Empty caches:
     $ sudo yum clean all
     $ sudo rm /root/install.log
 
+
+Package
+-------
+CD to directory containing virtual machine disk.
+
+	$ vagrant package --base centos-5.8-minimal
