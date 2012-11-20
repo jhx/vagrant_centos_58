@@ -270,39 +270,6 @@ Install Chef gem:
 Take snapshot.
 
 
-Install Additional Repos
-------------------------
-Download and install EPEL:
-
-    $ sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-
-Download and install RBEL:
-
-	$ sudo rpm -Uvh http://rbel.frameos.org/stable/el5/x86_64/rbel5-release-1.0-2.el5.noarch.rpm
-
-Take snapshot.
-
-
-Install Ruby
-------------
-Install Ruby and related packages:
-
-	$ sudo yum install -y ruby.x86_64 ruby-devel.x86_64 rubygems
-
-Create `/etc/gemrc` defaults:
-
-	$ sudo nano /etc/gemrc
-
-	install: --no-rdoc --no-ri 
-	update:  --no-rdoc --no-ri
-
-Install Chef gem:
-
-	$ sudo gem install chef
-
-Take snapshot.
-
-
 Edit Path
 ---------
 Add paths to `/etc/profile.d`:
