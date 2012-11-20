@@ -265,6 +265,10 @@ Take snapshot.
 
 Clean Up
 --------
+Disable `kudzu`:
+
+	$ sudo chkconfig kudzu off
+
 Empty caches:
 
     $ sudo yum clean all
