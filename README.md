@@ -279,7 +279,9 @@ Take snapshot.
 
 Package
 -------
-CD to directory containing virtual machine disk.
+CD to directory containing virtual machine disk and package box.
 
 	$ vagrant package --base centos-5.8-minimal
 	$ vagrant box add centos-58-x86_64-minimal ./package.box
+	$ ls -alh package.box
+	-rw-r--r--  1 doc  staff   468M Nov 20 08:05 package.box
